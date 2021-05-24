@@ -52,6 +52,17 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
+.bg-img{
+  background-image: url(https://images.squarespace-cdn.com/content/v1/58f4e764d1758e2a7af1817a/1532055792909-0OX2SOZOS2JBOKFH0S7S/ke17ZwdGBToddI8pDm48kCd_aZnQiGBw_1crRQerc0t7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UQhbMNvjAZH-voIarNsMAkuugCjm9FcH8KY-IN7rsHwrgcn6GrooQgfbQFaDpHcBUw/flat-lay-desk.jpg?format=2500w);
+  background-repeat: no-repeat;
+  object-fit: fill;
+}
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
 
 body {
   margin: 0;
@@ -61,7 +72,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #f2f2f2;
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {

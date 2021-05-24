@@ -11,7 +11,7 @@
     <title>task-cp</title>
 </head>
 
-<body>
+<body class="bg-img">
     <header>
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
@@ -47,7 +47,38 @@
                 </form>
             </div>
             <div class="row" id="lists">
+                <!-- <div class="col-3">
+                    <div
+                        class="card ${List.color == 1 ? 'bg-primary' : List.color == 2 ? 'bg-danger' : List.color == 3 ? 'bg-secondary' : List.color == 4 ? 'bg-success' : List.color == 5 ? 'bg-info' : List.color == 6 ? 'bg-dark' : ''} my-2">
+                        <div class="card-title ">
+                            <h2>${List.name}</h2>
+                            <p> ${tasksTotal} </p>
+                        </div>`
+                        tasks.forEach(t => {
+                        taskCount()
+                        template += `<li class="row">
+                            <input type="checkbox" name="completed" id="" onclick="app.tasksController.deleteTask('${t.title}')">
+                            <div class="col-7">${task.title}</div>
+                                <div>${task.description}</div>
+                                <button class="trash">trash</button>
+                        </li>
+                        <ul class="col-12">`
+                        })
+                        template += `</ul>
+                        <form onsubmit="app.tasksController.addTask(event, '${List.id}')">
+                            <label for="title" class="sr-only">Title:</label>
+                            <input type="text" name="title" id="" class="form-control" placeholder="Task Title"
+                                required>
+                            <input type="text" name="description" id="" class="form-control"
+                                placeholder="Task Description">
+                            <button type="submit" class="btn btn-primary"> Add Task</button>
+                        </form>
+                        <button class="btn bg-transparent" onclick="app.listsController.deleteList('listId')">
+                            DELETE </button>
+                    </div>
+                </div> -->
             </div>
+        </div>
         </div>
     </main>
     <footer class="container-fluid bg-dark text-light">
