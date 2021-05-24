@@ -22,7 +22,6 @@ export class TasksController{
     tasksService.deleteTask(taskTitle)
   }
   taskComplete(taskTitle){
-
   tasksService.taskComplete(taskTitle)
     }
 }

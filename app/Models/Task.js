@@ -5,5 +5,6 @@ export class Task{
     this.title = title
     this.list = list
     this.value = 1
+    this.checked = false
   }
 }

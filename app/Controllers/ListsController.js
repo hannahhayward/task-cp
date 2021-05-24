@@ -11,6 +11,7 @@ function draw() {
   lists.forEach(l => {
     let tasks = ProxyState.tasks.filter(t => t.list == l.id)
     let tasksTotal = 0
+    let completeTasks = 0
     template += /*html*/ `
     <div class="col-4">
       <div class="card ${l.color == 1 ? 'bg-primary' : l.color == 2 ? 'bg-danger' : l.color == 3 ? 'bg-secondary' : l.color == 4 ? 'bg-success' : l.color == 5 ? 'bg-info' : l.color == 6 ? 'bg-dark' : ''} my-2">
@@ -22,7 +23,7 @@ function draw() {
       tasksTotal += t.value
       template +=  /*html*/ `<li class = "list-group-item ${l.color == 1 ? 'bg-primary' : l.color == 2 ? 'bg-danger' : l.color == 3 ? 'bg-secondary' : l.color == 4 ? 'bg-success' : l.color == 5 ? 'bg-info' : l.color == 6 ? 'bg-dark' : ''} text-light text-center">
                 <div> 
-                <b id="check">${t.title}</b>
+                <b id='${t.title}'>${t.title}</b>
                 <div>
                 <button class="trash btn text-light" onclick="app.tasksController.deleteTask('${t.title}')">
                 <i class="mdi mdi-trash-can-outline"></i>
@@ -45,6 +46,7 @@ function draw() {
               </button>
               </form>
               <div class="card-footer">
+              <h6 class= "text-center text-light"> completed tasks: ${completeTasks} </h6>
               <p class="text-center text-light"> total tasks: ${tasksTotal} </p>
               <button class = "btn btn-block btn-outline-light" onclick="app.listsController.deleteList('${l.id}')" > 
               <i class="mdi mdi-trash-can-outline"></i>

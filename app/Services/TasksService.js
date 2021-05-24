@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import { Task } from "../Models/Task.js"
+import { saveState } from "../Utils/LocalStorage.js"
 
 
 class TasksService{
@@ -14,8 +15,10 @@ class TasksService{
     console.log(ProxyState.tasks, 'remaining tasks')}
   }
   taskComplete(taskTitle){
-    ProxyState.tasks.find(x => x.title === 'taskTitle')
-      document.getElementById('check').classList.add('task-complete')
+    // debugger
+    ProxyState.tasks.find(x => x.title == taskTitle)
+      document.getElementById(taskTitle).classList.toggle('task-complete')
+      localStorage.setItem( taskTitle, Task.checked = true)
     console.log('task completed',taskTitle)
   }
 }
