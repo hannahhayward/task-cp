@@ -13,15 +13,10 @@ class TasksService{
     ProxyState.tasks = ProxyState.tasks.filter(t => t.title != taskTitle)
     console.log(ProxyState.tasks, 'remaining tasks')}
   }
-  taskComplete(){
-    // ProxyState.tasks = ProxyState.tasks.filter(t => t.title != taskTitle)
-    var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-    console.log('you completed a task!')
+  taskComplete(taskTitle){
+    ProxyState.tasks.find(x => x.title === 'taskTitle')
+      document.getElementById('check').classList.add('task-complete')
+    console.log('task completed',taskTitle)
   }
 }
 export const tasksService = new TasksService

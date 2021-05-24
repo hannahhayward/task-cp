@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>task-cp</title>
 </head>
@@ -28,13 +29,13 @@
                         <div class="form-group">
                             <label for="name" class="sr-only">List Name:</label>
                             <input type="text" placeholder="List Name" id="name" class="form-control" minlength="3"
-                                maxlength="15" required>
+                                maxlength="15" required style="height: 6vh;">
                         </div>
                 </div>
                 <div class=" col-6 input-group-prepend">
                     <label for="color" class="sr-only">List Color:</label>
-                    <select id="color" class="custom-select">
-                        <option selected>List Color..</option>
+                    <select id="color" class="custom-select h-75">
+                        <!-- <option selected class="disabled">List Color..</option> -->
                         <option value="1">Blue</option>
                         <option value="2">Red</option>
                         <option value="3">Pink</option>
@@ -42,7 +43,9 @@
                         <option value="5">Teal</option>
                         <option value="6">Black</option>
                     </select>
-                    <button class="btn btn-primary shadow" type="submit">+</button>
+                    <button class="btn btn-success h-75 mx-1" type="submit">
+                        <i class="mdi mdi-card-plus"></i>
+                    </button>
                 </div>
                 </form>
             </div>

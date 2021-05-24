@@ -1,3 +1,5 @@
+import { ProxyState } from "../AppState.js"
+import { Task } from "../Models/Task.js"
 import { tasksService } from "../Services/TasksService.js"
 
 export class TasksController{
@@ -19,14 +21,8 @@ export class TasksController{
     console.log('deleted task', taskTitle)
     tasksService.deleteTask(taskTitle)
   }
-  taskComplete(){
-    var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-  console.log('task completed')
-  tasksService.taskComplete()
-}
+  taskComplete(taskTitle){
+
+  tasksService.taskComplete(taskTitle)
+    }
 }

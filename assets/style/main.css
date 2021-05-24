@@ -58,10 +58,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   object-fit: fill;
 }
 
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
+.task-complete{
+text-decoration: line-through;
 }
 
 body {
